@@ -3,7 +3,7 @@ from DaneStatki import DaneStatkow
 import random
 
 class Flota():
-    '''Klasa flota obsluguje utworzenie floty i dzialanie wykonywane z walka.'''
+    '''Klasa flota obsluguje utworzenie floty oraz dzialania wykonywane z walka.'''
     def __init__(self, dana):
         temp = False
         with open(dana) as plik:
@@ -31,7 +31,6 @@ class Flota():
         ''' Metoda obslugujaca usuwanie zniszczonych statkow. '''
         _statki = self.statki[:]
         for k in xrange(len(_statki)):
-            # print _statki[k].stan()
             if Statek.czy_zniszczony(_statki[k]) is True:
                 self.ilosc[k] = 0
 
@@ -66,27 +65,7 @@ class Flota():
             x += 1
     def stan_floty(self):
         ''' Metoda zwracajaca aktualna ilosc floty. '''
-        counter = 0
-        for i in xrange(len(self.statki)):
-            if self.ilosc[i] != 0:
-                counter += 1
-                # print self.statki[i], self.ilosc[i], self.skr[i]
-        print counter, 'count'
-
-# 1 runda
-#F1 = Flota("flota_1.txt")
-#F1.losuj_cel("flota_2.txt")
-# print F1.stan_floty()
-# print F1.usun_zniszczony()
-
-# 2 runda
-#F1 = Flota("flota_1.txt")
-#F2 = Flota("flota_2.txt")
-#F2.losuj_cel(F1)
-
-#F1 = Flota("flota_1.txt")
-#F2 = Flota("flota_2.txt")
-#F1.losuj_cel(F2)
+        return self.ilosc.count(1)
 
 
 

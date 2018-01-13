@@ -14,10 +14,8 @@ class Statek():
     def strzal(self,statek):
         ''' Metoda obslugujaca oddanie strzalu przez statek.'''
         if self.atak < 0.01 * statek.oslona:
-            print 'nie trafilem'
             return False
         else:
-            # print 'trafilem'
             self.trafiony(statek)
             return True
 
@@ -29,14 +27,11 @@ class Statek():
                 t = i  # nr linii
             except Exception:
                 pass
-                # print "Nie znaleziono dziala"
             try:
                 x = DaneStatkow.szybkie_dziala[i].index(skrot_przec)  # nr miejsca
                 y = i
             except Exception:
                 pass
-                # print "Nie znaleziono dziala"
-        # print t, y+1
         return  int(DaneStatkow.szybkie_dziala[t][y+1])
 
 
@@ -45,14 +40,11 @@ class Statek():
         True - wybuch
         False - zyje'''
         statek.punkty_str -= (self.atak - statek.oslona)
-        # print statek.punkty_str,'statek trafiony', self.atak
         index = DaneStatkow.skrot.index(statek.skrot)
         if (statek.oslona - self.atak) < 0:
             statek.oslona = 0
         else:
             statek.oslona = statek.oslona - self.atak
-        #print statek.oslona, 'oslona!'
-        #print statek.punkty_str, 'pkt!'
         if statek.punkty_str < 0.7 * int(DaneStatkow.punkty_str[index]):
             wybuch = (1 - (float(statek.punkty_str)/ float(DaneStatkow.punkty_str[index])))
             los = random.random()
@@ -71,6 +63,3 @@ class Statek():
         ''' Metoda zwracajaca aktualny stan statku. '''
 
         return self.skrot, self.punkty_str, self.atak, self.oslona
-
-# S = Statek('mt')
-# print S.strzal('dt')
