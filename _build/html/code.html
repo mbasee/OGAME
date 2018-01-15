@@ -1,0 +1,171 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>This is code documentation &#8212; ogame 1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to ogame’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-DaneStatki">
+<span id="this-is-code-documentation"></span><h1>This is code documentation<a class="headerlink" href="#module-DaneStatki" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="DaneStatki.DaneStatkow">
+<em class="property">class </em><code class="descclassname">DaneStatki.</code><code class="descname">DaneStatkow</code><a class="headerlink" href="#DaneStatki.DaneStatkow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wczytanie danych wszystkich statkow(skrot, nazwa, punkty_strukturalne, oslona, atak)</p>
+</dd></dl>
+
+<span class="target" id="module-Statek"></span><dl class="class">
+<dt id="Statek.Statek">
+<em class="property">class </em><code class="descclassname">Statek.</code><code class="descname">Statek</code><span class="sig-paren">(</span><em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#Statek.Statek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa Statek obsluguje zdarzenia wywolywane na danym statku.</p>
+<dl class="method">
+<dt id="Statek.Statek.czy_zniszczony">
+<code class="descname">czy_zniszczony</code><span class="sig-paren">(</span><em>statek</em><span class="sig-paren">)</span><a class="headerlink" href="#Statek.Statek.czy_zniszczony" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda sprawdzajaca, czy statek zostal zniszczony.
+True - zniszczony
+False - niezniszczony</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Statek.Statek.stan">
+<code class="descname">stan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Statek.Statek.stan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca aktualny stan statku.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Statek.Statek.strzal">
+<code class="descname">strzal</code><span class="sig-paren">(</span><em>statek</em><span class="sig-paren">)</span><a class="headerlink" href="#Statek.Statek.strzal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda obslugujaca oddanie strzalu przez statek.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Statek.Statek.szybkie_dzialaa">
+<code class="descname">szybkie_dzialaa</code><span class="sig-paren">(</span><em>skrot</em>, <em>skrot_przec</em><span class="sig-paren">)</span><a class="headerlink" href="#Statek.Statek.szybkie_dzialaa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca szanse na oddanie kolejnego strzalu przez statek.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Statek.Statek.trafiony">
+<code class="descname">trafiony</code><span class="sig-paren">(</span><em>statek</em><span class="sig-paren">)</span><a class="headerlink" href="#Statek.Statek.trafiony" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda obslugujaca trafienie, sprawdzenie wybuchu, odejmowanie punktow.
+True - wybuch
+False - zyje</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-Flota"></span><dl class="class">
+<dt id="Flota.Flota">
+<em class="property">class </em><code class="descclassname">Flota.</code><code class="descname">Flota</code><span class="sig-paren">(</span><em>dana</em><span class="sig-paren">)</span><a class="headerlink" href="#Flota.Flota" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klasa flota obsluguje utworzenie floty oraz dzialania wykonywane z walka.</p>
+<dl class="method">
+<dt id="Flota.Flota.losowanie_przeciwnika">
+<code class="descname">losowanie_przeciwnika</code><span class="sig-paren">(</span><em>flota</em><span class="sig-paren">)</span><a class="headerlink" href="#Flota.Flota.losowanie_przeciwnika" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda obslugujaca losowanie przeciwnika do oddania strzalu przez statek.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Flota.Flota.losuj_cel">
+<code class="descname">losuj_cel</code><span class="sig-paren">(</span><em>flota</em>, <em>przeciwnik=0</em>, <em>x=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Flota.Flota.losuj_cel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda obslugujaca bitwe pomiedzy statkami a przeciwnikami.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Flota.Flota.stan_floty">
+<code class="descname">stan_floty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Flota.Flota.stan_floty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda zwracajaca aktualna ilosc floty.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Flota.Flota.usun_zniszczony">
+<code class="descname">usun_zniszczony</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Flota.Flota.usun_zniszczony" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metoda obslugujaca usuwanie zniszczonych statkow.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-Wojna"></span><dl class="function">
+<dt id="Wojna.gra_glowna">
+<code class="descclassname">Wojna.</code><code class="descname">gra_glowna</code><span class="sig-paren">(</span><em>flota_1</em>, <em>flota_2</em><span class="sig-paren">)</span><a class="headerlink" href="#Wojna.gra_glowna" title="Permalink to this definition">¶</a></dt>
+<dd><p>Funkcja realizujaca wojne pomiedzy flotami. Wykonuje 6 rund.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to ogame’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Mateusz.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/code.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,11 @@
+This is code documentation
+==========================
+
+.. automodule:: DaneStatki
+    :members:
+.. automodule:: Statek
+    :members:
+.. automodule:: Flota
+    :members:
+.. automodule:: Wojna
+    :members:
